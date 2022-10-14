@@ -1,39 +1,35 @@
 package cursojava.classes;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 
-	private int idade;
+	protected String nomeEscola;
+	protected String serieMatriculado;
+	protected String Disciplinas;
+	protected String dataMatricula;
 
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
-	private String dataMatricula;
-	private String nomeEscola;
-	private String serieMatriculado;
-	private String nome;
 	
-	private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
-	
-	
-	public void setDisciplinas(List<Disciplina> disciplinas) {
-		this.disciplinas = disciplinas;
-	}
-	
-	public List<Disciplina> getDisciplinas() {
+	private Disciplina disciplina = new Disciplina();
+
+	public ArrayList<Disciplina> getDisciplinas() {
 		return disciplinas;
 	}
-	
-	
-	
-	
-	
-	
+
+	public void setDisciplinas(ArrayList<Disciplina> disciplinas) {
+		this.disciplinas = disciplinas;
+	}
+
+	private ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
+	}
+
+	public Disciplina getDisciplina() {
+		return disciplina;
+	}
 
 	public String getDataNascimento() {
 		return dataNascimento;
@@ -76,7 +72,7 @@ public class Aluno {
 	}
 
 	public String getDataMatricula() {
-		return dataMatricula;
+		return this.dataMatricula;
 	}
 
 	public void setDataMatricula(String dataMatricula) {
@@ -114,7 +110,8 @@ public class Aluno {
 		idade = idadePadrao;
 
 	}
-	//Métodos Getter and Setter.
+
+	// Métodos Getter and Setter.
 
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -135,8 +132,8 @@ public class Aluno {
 	public double getMediaNota() {
 		double somaNotas = 0.0;
 		for (Disciplina disciplina : disciplinas) {
-			
-			somaNotas+=disciplina.getN1();
+			somaNotas += disciplina.getN1();
+
 		}
 		return somaNotas / disciplinas.size();
 
@@ -155,28 +152,17 @@ public class Aluno {
 
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
-        if (media >= 50){
-        	
-        	
-		if (media >= 70) {
+
+		if (media >= 60) {
 
 			return "Aluno aprovado";
-		}else{
-			
-			return "Aluno em Recuperação";
 		}
-			
-		
-        }else{
-        	return "Aluno está Aprovado";       }
-		
-		
-		
 
-       
-        }
-		
-	
+		else {
+			return "Reprovado";
+		}
+
+	}
 
 	@Override
 	public int hashCode() {
@@ -192,15 +178,35 @@ public class Aluno {
 		if (getClass() != obj.getClass())
 			return false;
 		Aluno other = (Aluno) obj;
-		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
+		return Objects.equals(nome, other.nome)
+				&& Objects.equals(numeroCpf, other.numeroCpf);
+	}
+
+	public void setDisciplinas(String disciplinas) {
+		Disciplinas = disciplinas;
 	}
 
 	@Override
 	public String toString() {
-		return "Aluno [idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral=" + registroGeral
-				+ ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai + ", dataMatricula="
-				+ dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado=" + serieMatriculado + ", nome="
-				+ nome + "]";
+		return "Aluno [idade=" + idade + ", dataNascimento=" + dataNascimento
+				+ ", registroGeral=" + registroGeral + ", numeroCpf="
+				+ numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola="
+				+ nomeEscola + ", serieMatriculado=" + serieMatriculado
+				+ ", nome=" + nome + ", disciplina=" + disciplina + "]";
 	}
 	
+	public boolean pessoamaiorIdade(){
+		return super.idade >= 18;
+		
+	}
+	
+	public 	String msgMaiordeIdade(){
+		return this.pessoamaiorIdade()? "Aluno maior de Idade" : "Aluno não é maior de idade";
+	}
+ public double salario(){
+	
+	 
+	 return 1500.90;
+ }
 }

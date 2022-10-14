@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="61" key="DIALOG_X_ORIGIN"/>
-		<item value="4" key="DIALOG_Y_ORIGIN"/>
-	</section>
-	<section name="org.eclipse.ui.preferences.keysPreferencePage">
-		<item value="true" key="actionSetFilter"/>
-		<item value="true" key="uncategorizedFilter"/>
-		<item value="true" key="internalFilter"/>
-	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="497" key="dialogHeight"/>
-		<item value="960" key="dialogWidth"/>
+		<item value="846" key="dialogHeight"/>
+		<item value="1200" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">

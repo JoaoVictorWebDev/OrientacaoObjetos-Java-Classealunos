@@ -1,0 +1,63 @@
+package com.curso;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import cursojava.classes.Aluno;
+
+public class estudo {
+
+	public static void main(String[] args) {
+		for (int pos = 1; pos < 4; pos++) {
+		String nome = JOptionPane.showInputDialog("Qual o seu nome?");
+		String idade = JOptionPane.showInputDialog("Qual a sua idade?");
+		String dataNasci = JOptionPane.showInputDialog("Qual a sua data de Nascimento?");
+		String dataMatri = JOptionPane.showInputDialog("Qual a sua data de Matricula?");
+		String NomeEscola = JOptionPane.showInputDialog("Qual o nome da Escola?");
+		String nomeMae = JOptionPane.showInputDialog("Qual o nome da sua Mãe?");
+		String nomePai = JOptionPane.showInputDialog("Qual o nome do seu Pai?");
+		String serieMatriculada = JOptionPane.showInputDialog("Qual o nome da Escola?");
+		String numeroCPF = JOptionPane.showInputDialog("Qual o seu CPF?");
+		String registroGeral = JOptionPane.showInputDialog("Digite seu Registro Geral :");
+
+		
+
+		Scanner scan = new Scanner(System.in);
+		Aluno aluno = new Aluno();
+		aluno.setNome(nome);
+		aluno.setDataNascimento(dataNasci);
+		aluno.setDataMatricula(dataMatri);
+		
+		aluno.setNomeEscola(NomeEscola);
+		aluno.setNomeMae(nomeMae);
+		aluno.setNomePai(nomePai);
+		aluno.setSerieMatriculado(serieMatriculada);
+		aluno.setNumeroCpf(numeroCPF);
+		aluno.setRegistroGeral(registroGeral);
+		
+
+		/* ========================================= Aqui será o Aluno 2 */
+
+		System.out.println("=============================");
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome(nome);
+		aluno2.setDataNascimento(dataNasci);
+		aluno2.setDataMatricula(dataMatri);
+
+		aluno2.setNomeEscola(NomeEscola);
+		aluno2.setNomeMae(nomeMae);
+		aluno2.setNomePai(nomePai);
+		aluno2.setSerieMatriculado(serieMatriculada);
+		aluno2.setNumeroCpf(numeroCPF);
+		aluno2.setRegistroGeral(registroGeral);
+
+		 
+				aluno.getDisciplina().setDisciplina1(JOptionPane.showInputDialog("Insira Sua Disciplina" + pos));;
+				aluno.getDisciplina().setN2(Double.parseDouble(JOptionPane.showInputDialog("Insira Sua nota" + pos)));
+		 }
+
+
+	}
+
+}

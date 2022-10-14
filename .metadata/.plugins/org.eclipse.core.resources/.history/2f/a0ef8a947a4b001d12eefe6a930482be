@@ -1,0 +1,63 @@
+package cursojava.classes;
+
+import com.interfaces.PermitirACESSO;
+
+public class Secretario extends Pessoa implements PermitirACESSO {
+	protected String registro;
+	protected String nivelCargo;
+	protected String experiencia;
+	private String login;
+	private String senha;
+
+	public Secretario(String login2, String senha2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getRegistro() {
+		return registro;
+	}
+
+	public void setRegistro(String registro) {
+		this.registro = registro;
+	}
+
+	public String getNivelCargo() {
+		return nivelCargo;
+	}
+
+	public void setNivelCargo(String nivelCargo) {
+		this.nivelCargo = nivelCargo;
+	}
+
+	public String getExperiencia() {
+		return experiencia;
+	}
+
+	public void setExperiencia(String experiencia) {
+		this.experiencia = experiencia;
+	}
+
+	public boolean autenticar() {
+		// TODO Auto-generated method stub
+		return login.equals("admin")&& senha.equals("admin");
+	}
+
+	@Override
+	public double salario() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+
+	@Override
+	public boolean autenticar(String login, String senha) {
+		// TODO Auto-generated method stub
+		return autenticar();
+	}
+	
+	
+	
+		
+
+}

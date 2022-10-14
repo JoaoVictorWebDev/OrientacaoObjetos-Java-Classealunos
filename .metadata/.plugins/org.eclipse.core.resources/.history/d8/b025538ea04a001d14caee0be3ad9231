@@ -1,0 +1,10 @@
+package cursojava.classes;
+
+public class Pessoa {
+ protected String Nome;
+ protected String dataNascimento;	
+ protected String RegistroGeral;
+ protected String numeroCPF;
+ protected String nomePai;
+ protected String nomeMae;
+}

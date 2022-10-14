@@ -1,0 +1,60 @@
+package com.curso;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+import cursojava.classes.Aluno;
+import cursojava.classes.Disciplina;
+
+public class estudo {
+
+	public static void main(String[] args) {
+		
+		String nome = JOptionPane.showInputDialog("Qual o seu nome?");
+		String idade = JOptionPane.showInputDialog("Qual a sua idade?");
+		String dataNasci = JOptionPane.showInputDialog("Qual a sua data de Nascimento?");
+		String dataMatri = JOptionPane.showInputDialog("Qual a sua data de Matricula?");
+		String NomeEscola = JOptionPane.showInputDialog("Qual o nome da Escola?");
+		String nomeMae = JOptionPane.showInputDialog("Qual o nome da sua Mãe?");
+		String nomePai = JOptionPane.showInputDialog("Qual o nome do seu Pai?");
+		String serieMatriculada = JOptionPane.showInputDialog("Qual o nome da Escola?");
+		String numeroCPF = JOptionPane.showInputDialog("Qual o seu CPF?");
+		String registroGeral = JOptionPane.showInputDialog("Digite seu Registro Geral :");
+
+		
+
+		Scanner scan = new Scanner(System.in);
+		Aluno aluno = new Aluno();
+		aluno.setNome(nome);
+		aluno.setDataNascimento(dataNasci);
+		aluno.setDataMatricula(dataMatri);
+		
+		aluno.setNomeEscola(NomeEscola);
+		aluno.setNomeMae(nomeMae);
+		aluno.setNomePai(nomePai);
+		aluno.setSerieMatriculado(serieMatriculada);
+		aluno.setNumeroCpf(numeroCPF);
+		aluno.setRegistroGeral(registroGeral);
+		
+		for(int pos = 1; pos <= 4; pos++){
+			String nomeDisciplina = JOptionPane.showInputDialog("Nome da Disciplina" + pos);
+			String notaDisciplina = JOptionPane.showInputDialog("Nota da Disciplina" + pos);
+			
+			Disciplina disciplina = new Disciplina();
+			
+			disciplina.setDisciplina1(nomeDisciplina);
+			disciplina.setN1(Double.valueOf(notaDisciplina));
+			aluno.getDisciplinas().add(disciplina);
+			
+		}
+		
+
+		System.out.println(aluno.getAlunoAprovado());
+	
+		 
+
+
+	}
+
+}

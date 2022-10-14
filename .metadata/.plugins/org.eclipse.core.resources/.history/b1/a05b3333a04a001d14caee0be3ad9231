@@ -1,0 +1,7 @@
+package cursojava.classes;
+
+public class Secretario extends Pessoa {
+protected String registro;
+protected String nivelCargo;
+protected String experiencia;
+}

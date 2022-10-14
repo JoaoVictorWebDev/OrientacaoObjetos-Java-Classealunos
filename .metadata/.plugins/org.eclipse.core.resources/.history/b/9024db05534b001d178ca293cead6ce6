@@ -1,0 +1,23 @@
+package ClasseExecutavel;
+
+import cursojava.classes.Aluno;
+import cursojava.classes.Secretario;
+
+public class TestandoClasssesFilhas {
+public static void main(String[] args) {
+	
+	Aluno aluno = new Aluno();
+	aluno.setDataNascimento("18/03/2003");
+	aluno.setIdade(16);
+	
+	Secretario secretario = new Secretario();
+	secretario.setExperiencia("19 ANOS");
+	 
+	System.out.println(aluno);
+	System.out.println(secretario);
+	
+	aluno.pessoamaiorIdade();
+	
+	
+}
+}

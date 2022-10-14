@@ -8,7 +8,7 @@ import cursojava.classes.Aluno;
 import cursojava.classes.Disciplina;
 import cursojava.classes.Secretario;
 
-public class estudo {
+public class ClasseAlunos {
 
 	public static void main(String[] args) {
 	
